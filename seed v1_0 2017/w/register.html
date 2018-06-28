@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register - S.E.E.D</title>
+	<meta name="viewport" content="width=screen-width,height=device-height,initial-scale=1.0">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon" /> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style type="text/css">
+    @media screen and (max-width:1275px)
+    {
+    body{
+      width:1275px;
+    }
+    }
+    	input[type='text']
+		{
+		margin-top: 7px;
+		margin-bottom: 7px; 
+		margin-right:20px;
+    	font-family: main2;
+    	width:185px;
+    	height: 25px;
+    	border:1px solid rgb(238,19,19);
+    	padding-left: 10px;
+    	box-shadow:0 0 8px rgb(238,19,19);
+    	border-radius: 4px;
+		}
+		input[type='submit']
+		{
+			font-family: main2;
+			border: 1px solid green;
+			background: none;
+			color: green;
+			font-size:18px;
+			width: 360px;
+			height: 37px;
+			margin-top: 15px;
+			margin-bottom: 30px;
+			margin-left:20px;
+			cursor: pointer;
+		}
+		input[type='submit']:hover
+		{
+			color: white;
+			background-color: green;
+			transition: 0.3s ease;
+		}
+		input[type='radio']
+		{
+			width: 15px;
+			height: 15px;
+		}
+		.rupee::before{
+		font-family: fontawesome;
+		content: "\f156";
+		font-weight: lighter;
+		}
+		select{
+			bottom: 5px;
+			border:1px solid rgb(238,19,19);
+			box-shadow:0 0 8px rgb(238,19,19);
+			font-family: main2;
+    		border-radius: 4px;
+    		height: 25px;
+    		width: 120px
+		}
+    </style>
+</head>
+<body>
+<header>
+	<img id="top_head" src="images/b9.jpg" style="position: absolute;width: 100%;height: 105px;margin-top: 0;margin-left: 0;z-index: -2;opacity: 0.08">
+	<center>
+	<div style="margin-top:35px;margin-left: 3%;width:125px;border:2px solid white;border-radius:20%;display:inline-block"></div>
+	<div style="font-size: 30px;padding:0 2% 0 2%;display:inline">Society of Electrical <span style="font-family: main2">&</span> Electronics Department</div>
+	<div style="width:125px;border:2px solid white;border-radius:20%;display:inline-block"></div>
+	<div style="margin-top: 23px;margin-left: 3%">
+	<a href="index.php#top_head" class="a">Home</a>
+	<a href="index.php#about_scroll" class="a">About</a>
+	<a href="about_app.html" class="a">About the S.E.E.D App</a>
+	<a href="index.php#lu_scroll" class="a">Latest News</a>
+	<a href="index.php#contact_scroll" class="a">Contact Us</a>
+	<a class="a" onmouseover="show_quicklinks(1)" onmouseout="show_quicklinks(0)"><span class="chevron" style="display: inline-block;">Extras
+	<div class="quicklinks" id="ql" style="display: none;">
+	<span class="quicklinks_tab" onclick="ql_surf(1)">JSS SIM Login</span>
+	<span class="quicklinks_tab" onclick="ql_surf(2)">JSS InfoConnect</span>
+	<span class="quicklinks_tab" onclick="ql_surf(3)">JSS Website</span>
+	<span class="quicklinks_tab" onclick="ql_surf(4)">AKTU Website</span>
+	</div></span>
+	</a>
+	</div>
+	</center>
+	<img src="images/logo_small.jpeg" class="img_overlay fade" height="84px" width="84px" style="position: absolute;margin-left:4%;top:11px;border-radius: 100%;background-color:white;box-sizing: border-box;">
+	<div style="position: absolute;top:70px;width:164px;right:1%;line-height: 28px;text-align: center;border-radius:8px 8px 0 0;background-color: rgba(255,255,255,0.2);">
+	<a href="https://www.facebook.com/jssseed" target="_blank"><div class="fb social" ></div></a>
+	<a href="https://www.youtube.com/channel/UCkAjX_ngcjQ_rjJ2m5pFUjg" target="_blank"><div class="yt social"></div></a>
+	<a href="https://www.plus.google.com" target="_blank"><div class="gle social"></div></a>
+	</div>
+</header>
+<section>
+<center>
+<div style="border: 1px solid grey;border-bottom: 0px solid;width: 93%;">
+	<div style="margin-top: 110px;font-family: main2;letter-spacing: 0.5px;font-size: 16px;line-height: 30px">
+	<div style="font-size: 24px;color:rgb(238,19,19);line-height: 60px;margin-bottom: 20px;">
+	<span style="border:3px solid rgb(238,19,19);padding: 6px 30px 6px 30px">	Register for ANDROCAR</span>
+	</div>
+	<div id="error" style="box-sizing: border-box;margin:20px 0 20px 0;height:35px;width: 550px;color: rgb(192, 68, 173);font-size: 14.5px;line-height: 35px;background-color: rgba(232, 218, 239,0.3);border-radius: 30px;border:1.5px solid rgb(202, 68, 173);display: none;font-weight: bold;">
+	</div>
+	<form method="post" action="submit.php" onsubmit="javascript:return validate();">
+	<span style="font-size: 18px;font-weight: bold;line-height:25px;">
+	TEAM DETAILS:
+	</span>
+	<br>
+	<br>
+	<select name="member_quantity" id="member_quantity" onclick="member_check()" style="height: 30px;width: 230px;border:1px solid grey;box-shadow:0 0 8px grey;border-radius: 4px;"><option value="0">Select Number of Team Members</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+	<br>
+	<br>
+	<div id="member1" style="display: none">
+	<strong>Member-1 Details :</strong>
+	&nbsp;&nbsp;
+	<input type="text" name="name1" id="name1" placeholder="Name 1">&nbsp;&nbsp;
+	<input type="text" name="email1" id="email1" placeholder="Email">&nbsp;&nbsp;
+	<input type="text" name="contact1" id="contact1" placeholder="Contact (+91)" maxlength="10" style="width: 140px;">&nbsp;&nbsp;
+	<select name="branch1" id="branch1"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="year1" id="year1"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;&nbsp;&nbsp;
+	<select name="living1" id="living1"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+	</div>
+	<div id="member2" style="display: none">
+	<strong>Member-2 Details :</strong>
+	&nbsp;&nbsp;
+	<input type="text" name="name2" id="name2" placeholder="Name 2">&nbsp;&nbsp;
+	<input type="text" name="email2" id="email2" placeholder="Email">&nbsp;&nbsp;
+	<input type="text" name="contact2" id="contact2" placeholder="Contact (+91)" maxlength="10" style="width: 140px;">&nbsp;&nbsp;
+	<select name="branch2" id="branch2"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="year2" id="year2"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;&nbsp;&nbsp;
+	<select name="living2" id="living2"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+	</div>
+	<div id="member3" style="display: none">
+	<strong>Member-3 Details :</strong>
+	&nbsp;&nbsp;
+	<input type="text" name="name3" id="name3" placeholder="Name 3">&nbsp;&nbsp;
+	<input type="text" name="email3" id="email3" placeholder="Email">&nbsp;&nbsp;
+	<input type="text" name="contact3" id="contact3" placeholder="Contact (+91)" maxlength="10" style="width: 140px;">&nbsp;&nbsp;
+	<select name="branch3" id="branch3"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="year3" id="year3"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;&nbsp;&nbsp;
+	<select name="living3" id="living3"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+	</div>
+	<div id="member4" style="display: none">
+	<strong>Member-4 Details :</strong>
+	&nbsp;&nbsp;
+	<input type="text" name="name4" id="name4" placeholder="Name 4">&nbsp;&nbsp;
+	<input type="text" name="email4" id="email4" placeholder="Email">&nbsp;&nbsp;
+	<input type="text" name="contact4" id="contact4" placeholder="Contact (+91)" maxlength="10" style="width: 140px;">&nbsp;&nbsp;
+	<select name="branch4" id="branch4"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="year4" id="year4"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;&nbsp;&nbsp;
+	<select name="living4" id="living4"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+	</div>
+	<div id="member5" style="display: none">
+	<strong>Member-5 Details :</strong>
+	&nbsp;&nbsp;
+	<input type="text" name="name5" id="name5" placeholder="Name 5">&nbsp;&nbsp;
+	<input type="text" name="email5" id="email5" placeholder="Email">&nbsp;&nbsp;
+	<input type="text" name="contact5" id="contact5" placeholder="Contact (+91)" maxlength="10" style="width: 140px;">&nbsp;&nbsp;
+	<select name="branch5" id="branch5"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="year5" id="year5"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;&nbsp;&nbsp;
+	<select name="living5" id="living5"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+	</div>
+	<br>
+	<hr size="1" colour="grey">
+	<br>
+	<span style="font-size: 18px;font-weight: bold;line-height:25px;">
+	COLLEGE NAME:
+	</span>
+	<br>
+	<input type="radio" id="college" value="jss" name="college" checked onclick="disable_radio()" style="margin-left: 13%"> JSS Academy of Technical Education,Noida&nbsp;&nbsp;<input type="radio" id="college" name="college" value="o_college" onclick="enable_radio()">Other College&nbsp;&nbsp;&nbsp;<input type="text" id="o_college" name="college_2" placeholder="Enter College Name" style="visibility: hidden;">
+	<br>
+	<br>
+	<hr size="1" colour="grey">
+	<br>
+	<span style="font-size: 18px;font-weight:bold;line-height: 25px;">
+	PAYMENT METHOD NOTICE:</span> &nbsp;&nbsp;&nbsp;<span style="font-size:17px;color: purple;font-weight: bold">(Total Amount for the Team:&nbsp;&nbsp;<span class="rupee">&nbsp;2,000</span>)</span>
+	<br>
+	<input type="radio" id="payment" value="cash" name="payment" checked onclick="disable_radio_payment()">&nbsp;<div style="border:3px solid rgb(238,19,19);border-radius: 50px;padding: 1px 30px;color:rgb(238,19,19);display: inline-block;"><b>Pay By Cash</b></div>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" id="payment" value="paytm" name="payment" onclick="enable_radio_payment()"><img src="images/paytm.png" style="height:35px;width:110px;margin-top: 10px">
+	<div id="paytm" style="display:none;margin-top: 20px">
+	<div style="border:1px solid grey;padding-top:2px;padding-bottom:10px;width: 80%">
+	<div style="color:rgb(80,80,80);font-size: 20px;margin-top: 10px;font-family: main"><strong><span style="border-bottom: 1px solid rgb(80,80,80);">Please Note</span></strong>&nbsp;:
+	<span style="font-size: 17px">&nbsp;&nbsp;&nbsp;*** The Team not sending the correct amount will not be considered for registration ***</span>
+	</div>
+	</div>
+	<br>
+	<span style="border:1px solid rgb(238,19,19);padding:9px 15px 10px 30px;font-size: 21px;line-height: 50px;color: rgb(238,19,19);border-right: 0px solid red;box-sizing: border-box;">
+	Please Fill the sender's Paytm mobile number:
+	</span>
+	<input type="text" maxlength="10" placeholder="Sender's Paytm No.(+91)" id="payee" name="payee" style="box-shadow: none;height: 45px;border-radius: 0px;margin-top: -5px;color: purple;font-size: 20px;width: 250px;text-align: center;padding-left: 0;border-left: none">
+	</div>
+	<br>
+	<br>
+	<input type="hidden" name="event" value="Androcar">
+	<input type="submit" value="Register and Proceed" style="margin-left: -1%">
+	</form>
+	</div>
+	</div>
+	</center>
+</section>
+<footer style="position: relative;">
+<span style="font-size: 17px;color: white;">&copy;&nbsp;</span><span style="letter-spacing: 1px">S.E.E.D</span> - 2017
+<br>
+<span style="position:absolute;font-size: 12.5px;bottom:5px;right:10px;font-family: main;cursor: pointer;letter-spacing: 1px"><a href="mailto:kunwarpadmesh@yahoo.com" style="text-decoration: none;color: inherit;">Website designed and developed by : Padmesh Kunwar</a></span>
+</footer>
+<script>
+function show_quicklinks(l)
+{
+	if(l==1)
+	{
+	document.getElementById("ql").style.display="block";
+	document.getElementById("ql").className="quicklinks quicklinks_trans";
+	}
+	if(l==0)
+	{
+	document.getElementById("ql").style.display="none";
+	}
+}
+function ql_surf(t){
+	if(t==1)
+	window.location.href = 'http://210.212.85.154/isimjss/login';
+	if(t==2)
+	window.location.href = 'http://210.212.85.155';
+	if(t==3)
+	window.location.href = 'http://www.jssaten.ac.in';
+	if(t==4)
+	window.location.href = 'https://aktu.ac.in';
+}
+</script>
+<script type="text/javascript">
+  function enable_radio(){
+    document.getElementById("o_college").style.visibility = "visible";
+  }
+  function disable_radio(){
+    document.getElementById("o_college").style.visibility = "hidden";
+  }
+</script>
+<script type="text/javascript">
+  function enable_radio_payment(){
+    document.getElementById("paytm").style.display = "block";
+  }
+  function disable_radio_payment(){
+    document.getElementById("paytm").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+function member_check(){
+	if(document.getElementById("member_quantity").value =="1")
+	{
+	document.getElementById("member1").style.display = "block";
+	document.getElementById("member2").style.display = "none";
+	document.getElementById("member3").style.display = "none";
+	document.getElementById("member4").style.display = "none";
+	document.getElementById("member5").style.display = "none";
+	}
+	if(document.getElementById("member_quantity").value =="2")
+	{
+	document.getElementById("member1").style.display = "block";
+	document.getElementById("member2").style.display = "block";
+	document.getElementById("member3").style.display = "none";
+	document.getElementById("member4").style.display = "none";
+	document.getElementById("member5").style.display = "none";
+	}
+	if(document.getElementById("member_quantity").value =="3")
+	{
+	document.getElementById("member1").style.display = "block";
+	document.getElementById("member2").style.display = "block";
+	document.getElementById("member3").style.display = "block";
+	document.getElementById("member4").style.display = "none";
+	document.getElementById("member5").style.display = "none";
+	}
+	if(document.getElementById("member_quantity").value =="4")
+	{
+	document.getElementById("member1").style.display = "block";
+	document.getElementById("member2").style.display = "block";
+	document.getElementById("member3").style.display = "block";
+	document.getElementById("member4").style.display = "block";
+	document.getElementById("member5").style.display = "none";
+	}
+	if(document.getElementById("member_quantity").value =="5")
+	{
+	document.getElementById("member1").style.display = "block";
+	document.getElementById("member2").style.display = "block";
+	document.getElementById("member3").style.display = "block";
+	document.getElementById("member4").style.display = "block";
+	document.getElementById("member5").style.display = "block";
+	}
+	if(document.getElementById("member_quantity").value =="0")
+	{
+	document.getElementById("member1").style.display = "none";
+	document.getElementById("member2").style.display = "none";
+	document.getElementById("member3").style.display = "none";
+	document.getElementById("member4").style.display = "none";
+	}
+}
+</script>
+<script type="text/javascript">
+	function validate(){
+		var c=0;
+		var mem=document.getElementById("member_quantity").value;
+		var a1=document.getElementById("name1").value;
+		var a2=document.getElementById("email1").value;
+		var a3=document.getElementById("contact1").value;
+		var a4=document.getElementById("branch1").value;
+		var a5=document.getElementById("year1").value;
+		var a6=document.getElementById("living1").value;
+		var b1=document.getElementById("name2").value;
+		var b2=document.getElementById("email2").value;
+		var b3=document.getElementById("contact2").value;
+		var b4=document.getElementById("branch2").value;
+		var b5=document.getElementById("year2").value;
+		var b6=document.getElementById("living2").value;
+		var c1=document.getElementById("name3").value;
+		var c2=document.getElementById("email3").value;
+		var c3=document.getElementById("contact3").value;
+		var c4=document.getElementById("branch3").value;
+		var c5=document.getElementById("year3").value;
+		var c6=document.getElementById("living3").value;
+		var d1=document.getElementById("name4").value;
+		var d2=document.getElementById("email4").value;
+		var d3=document.getElementById("contact4").value;
+		var d4=document.getElementById("branch4").value;
+		var d5=document.getElementById("year4").value;
+		var d6=document.getElementById("living4").value;
+		var e1=document.getElementById("name5").value;
+		var e2=document.getElementById("email5").value;
+		var e3=document.getElementById("contact5").value;
+		var e4=document.getElementById("branch5").value;
+		var e5=document.getElementById("year5").value;
+		var e6=document.getElementById("living5").value;
+
+		if(mem==0)
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Choose Team Member Number ! ! !";
+			c=1;
+			return false;
+		}
+		if((a1==""||a2==""||a3=="") && c==0 && (mem==1||mem==2||mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Fill Up the Details for Member-1 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((a4=="0"||a5=="0"||a6=="0") && c==0 && (mem==1||mem==2||mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Select the Details for Member-1 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((b1==""||b2==""||b3=="") && c==0 && (mem==2||mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Fill Up the Details for Member-2 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((b4=="0"||b5=="0"||b6=="0") && c==0 && (mem==2||mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Select the Details for Member-2 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((c1==""||c2==""||c3=="") && c==0 && (mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Fill Up the Details for Member-3 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((c4=="0"||c5=="0"||c6=="0") && c==0 && (mem==3||mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Select the Details for Member-3 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((d1==""||d2==""||d3=="") && c==0 && (mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Fill Up the Details for Member-4 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((d4=="0"||d5=="0"||d6=="0") && c==0 && (mem==4||mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Select the Details for Member-4 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((e1==""||e2==""||e3=="") && c==0 && (mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Fill Up the Details for Member-5 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((e4=="0"||e5=="0"||e6=="0") && c==0 && (mem==5))
+		{	
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Select the Details for Member-5 Correctly ! ! !";
+			c=1;
+			return false;
+		}
+		if((a1.indexOf(" ")==0||b1.indexOf(" ")==0||c1.indexOf(" ")==0||d1.indexOf(" ")==0||e1.indexOf(" ")==0)&&c==0)
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Enter correct names of members ! ! !";
+			c=1;
+			return false;
+		}
+		if((a2.match(/@/g)==null&&mem>=1)||(a2.match(/./g)==null&&mem>=1)||(b2.match(/@/g)==null&&mem>=2)||(b2.match(/./g)==null&&mem>=2)||(c2.match(/@/g)==null&&mem>=3)||(c2.match(/./g)==null&&mem>=3)||(d2.match(/@/g)==null&&mem>=4)||(d2.match(/./g)==null&&mem>=4)||(e2.match(/@/g)==null&&mem>=5)||(e2.match(/./g)==null&&mem>=5)&&c==0)
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Enter correct E-mail Address for members ! ! !";
+			c=1;
+			return false;
+		}
+		if((a3.length!=10&&mem>=1)||(b3.length!=10&&mem>=2)||(c3.length!=10&&mem>=3)||(d3.length!=10&&mem>=4)&&c==0)
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Enter correct 10-digit contact Number for members ! ! !";
+			c=1;
+			return false;
+		}
+		if(document.getElementById("o_college").style.visibility =="visible" && document.getElementById("o_college").value =="")
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Enter Your College Name ! ! !";
+			c=1;
+			return false;
+		}
+		if(document.getElementById("payee").value =="" && document.getElementById("paytm").style.display=="block")
+		{
+			document.getElementById("error").style.display="block";
+			document.getElementById("error").innerHTML="Please Enter Sender's PayTM mobile number ! ! !";
+			c=1;
+			return false;
+		}
+		if(c==0)
+		{
+			if(document.getElementById("paytm").style.display=="none")
+			{
+				document.getElementById("payee").value="00";
+			}
+			return true;
+		}
+	}
+</script>
+</body>
+</html>

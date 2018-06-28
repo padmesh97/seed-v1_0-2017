@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Secure Login - S.E.E.D</title>
+	<link rel="stylesheet" type="text/css" href="../w/styles.css">
+<style type="text/css">
+html,body{
+	height: 100%;
+}
+.foot_logo{
+	display: flex;
+	justify-content: center;
+	margin-top:-15px;
+	border-radius: 100%;
+	 height: 60px;
+	 width:60px;
+	 margin-right: 20px;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-image: url('http://www.jssseed.com/w/images/logo.jpeg');
+}
+.pwd{
+	border-radius:7px 0 0 7px;
+	border:2px solid grey;
+	border-right-width: 0px;
+	border-right-style: solid;
+	border-right-color: none;
+}
+.eye::before{
+	font-family: fontawesome;
+	font-weight: lighter;
+	padding-top: 0px;
+	font-size: 25px;
+    content: "\f06e";
+	color:rgb(100,100,250);
+}
+.eye-slash::before{
+	font-family: fontawesome;
+	font-weight:lighter;
+	padding-top: 0px;
+	font-size: 25px;
+    content: "\f070";
+	color:rgb(250,65,65);
+}
+.eye{
+	display: inline-block;
+	position: relative;
+	top:-1px;
+	cursor: pointer;
+	height: 32px;
+	line-height: 32px;
+	background-color: white;
+	width: 45px;
+	border:2px solid grey;
+    border-radius:0 7px 7px 0;
+    border-left-width: 0px;
+	border-left-style: solid;
+	border-left-color: none;
+}
+footer{
+	cursor: pointer;
+	bottom:0px;
+	height: 15%;
+	border-top:7px solid rgb(130,130,130);
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+</style>
+</head>
+<body style="background-color: rgb(250,250,250)">
+<div style="margin-top:120px;font-family: main;letter-spacing: 1.5px">
+<center>
+<h1>This is a secured region. Any inactivity in this area will be tracked down.</h1>
+<br><br>
+<span style="border:1px solid grey;border-radius: 10px;padding: 20px;display: inline-block;">
+<form action="view.php" method="post">
+<h2>PASSWORD :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="pwd" class="pwd" type="password" name="password" style="height:30px;font-size:28px;font-weight: lighter;font-family:main2;padding-left: 20px;"><div id="pwd-vis" class="eye" onclick="eyechange()"></div></h2>
+</form>
+</span>
+</center>
+</div>
+<footer>
+	<span class="foot_logo"></span> All the materials on this page is a property of S.E.E.D<span class="foot_logo" style="margin-left:20px"></span> 
+</footer>
+<script type="text/javascript">
+	var i=1;
+	function eyechange(){
+	if(i%2!=0)
+	{
+	document.getElementById("pwd-vis").className="eye eye-slash";
+	document.getElementById("pwd").type="text";
+	}	
+	if(i%2==0)
+	{
+	document.getElementById("pwd-vis").className="eye";
+	document.getElementById("pwd").type="password";
+	}
+	i++;
+	}
+</script>
+</body>
+</html>

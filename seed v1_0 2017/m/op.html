@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register - S.E.E.D</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" /> 
+  <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#FFC64B">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#FFC64B">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFC64B">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    @font-face{
+    font-family:'main';
+    src:url('fonts/Nunito-Light.ttf') format('truetype');
+}
+    input[type='text']
+    {
+      margin-top: 8px;
+      margin-bottom: 8px; 
+      font-family: main;
+      width:68%;
+      letter-spacing: 1px;
+      height: 30px;
+      font-weight: bold;
+      border:1px solid rgb(238,19,19);
+      padding-left: 10px;
+      box-shadow:0 0 8px rgb(238,19,19);
+      border-radius: 4px;
+    }
+    input[type='tel']
+    {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border:1px solid rgb(238,19,19);
+      box-shadow:0 0 8px rgb(238,19,19);
+      font-family: main;
+      padding-left: 10px;
+      box-sizing: border-box;
+      font-weight: bold;
+      border-radius: 4px;
+      height: 30px;
+      width: 35%;
+    }
+    input[type='radio']
+    {
+      width: 16px;
+      height: 16px;
+       margin-left: 1%
+    }
+    select{
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border:1px solid rgb(238,19,19);
+      box-shadow:0 0 8px rgb(238,19,19);
+      font-family: main;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 30px;
+      width: 35%;
+    }
+    .rupee::before{
+    font-family: fontawesome;
+    content: "\f156";
+    font-weight: lighter;
+    }
+    input[type='submit']
+    {
+      font-family: font2;
+      font-size:85%;
+      width: 65%;
+      height: 40px;
+      margin-top: 25px;
+      margin-bottom: 30px;
+      border: 1px solid green;
+      background: none;
+      color: green;
+    }
+    input[type='submit']:hover
+    {
+      color: white;
+      background-color: green;
+      transition: 0.1s ease;
+    }
+    </style>
+</head>
+<body style="font-family: main;">
+<div id="container2">
+<header style="background-color: rgb(238,19,19);box-shadow: 1px 1px 5px grey">
+<strong>
+S.E.E.D
+</strong>
+</header>
+
+<span style="position:fixed;z-index:4;height:24px;width: 24px;padding-top: 11px;padding-left: 13px;cursor: pointer;" onclick="openNav()"><img src="images/nav_lines.png" width="22px" height="22px"></span>
+
+
+
+<div  id="sidenav1" class="sidenav">
+<div id="img_nav">
+  <div style="position:absolute;display:block;top:110px;margin-left:15px;font-family: font2;width:80%;float:left;color:white">
+  <span style="font-size:14px;letter-spacing: 4px;">
+  S.E.E.D
+  </span>
+  <br>
+  <span style="font-size:16px;letter-spacing: 2px;">
+  JSS , Noida
+  </span>
+  </div>
+</div>
+  <div class="sidenav_bar">
+     <a href="index.php">
+        <img src="images/home_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">Home</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="about.html">
+        <img src="images/about_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">About</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="contact.html">
+        <img src="images/contact_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">Contact Us</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="info_app.html">
+        <img src="images/info_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">About S.E.E.D App</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="live_up.html">
+        <img src="images/gift_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">S.E.E.D Live Updates</span>
+     </a>
+  </div>
+
+  <hr size=1 style="position: relative;width:100%;" >
+
+  <div style="height:30px;width:100%;box-sizing: border-box;padding:0 0 0 10px;font-size: 110%;z-index: 6;color:#A3A3A3;display: inline-block;">Extras
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="http://210.212.85.154/isimjss/login">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS SIM</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="http://210.212.85.155">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS InfoConnect</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="https://aktu.ac.in">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">AKTU Website</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar" >
+     <a href="http://www.jssaten.ac.in">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS Website</span>
+     </a>
+  </div>
+
+  <div style="height:70px;width: 100%; display: inline-block;box-sizing: border-box;z-index: 6;">
+  <center>
+     <a href="https://www.facebook.com/jssseed">
+        <img src="images/fb_s.ico" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     &nbsp;
+     <a href="https://www.youtube.com/channel/UCkAjX_ngcjQ_rjJ2m5pFUjg">
+        <img src="images/yt_s.ico" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     &nbsp;
+     <a href="https://www.plus.google.com">
+        <img src="images/gle_s.png" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     </center>
+ </div>
+
+</div>
+
+<a href="javascript:void(0)" id="sidenav2" class="sidenav_rest" onclick="closeNav()"></a>
+
+<section style="position: relative;top:65px">
+  <center>
+  <div style="font-size:19px;line-height:30px;letter-spacing:0.5px;width: 97%;background-color: white;padding:8px 3px 8px 3px;box-sizing: border-box;margin-top:5px;border:1px solid rgb(238,19,19); box-shadow:0 0 10px rgb(238,19,19);">
+  Register for <span style="color: rgb(238,19,19);">Introductory Workshop</span>
+  </div>
+  <br>
+  <div id="error" style="box-sizing: border-box;margin:20px 0 20px 0;height:35px;width: 95%;color: rgb(192, 68, 173);font-size: 12.5px;line-height: 35px;background-color: rgba(232, 218, 239,0.3);border-radius: 30px;border:1.5px solid rgb(202, 68, 173);display:none;font-weight: bold;box-shadow:0 0 15px rgba(202, 68, 173,0.6);">
+  </div>
+  <form method="post" action="opsubmit.php" onsubmit="javascript:return validate();">
+  <br>
+  <div style="font-size: 16px;line-height: 25px;letter-spacing: 1px"><strong>-------- DETAILS ---------</strong></div>
+  <br>
+  <select name="member_quantity" id="member_quantity" onclick="member_check()" style="border:1px solid grey;box-shadow:0 0 8px grey;border-radius: 4px;width: 67%;display: none;"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+  </center>
+  <div id="member1" style="display:block">
+  <div style="font-size: 15px;line-height: 25px;letter-spacing: 1px;margin-left: 5%">Candidate Details:</div>
+  <center>
+  <input type="text" name="name1" id="name1" placeholder="Name">
+  <input type="text" name="email1" id="email1" placeholder="Email">
+  <input type="tel" name="contact1" id="contact1" placeholder="Contact (+91)" maxlength="10" style="">&nbsp;
+  <select name="branch1" id="branch1"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>
+  <select name="year1" id="year1"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;
+  <select name="living1" id="living1" style="display: none;"><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+  <br>
+  </center>
+  <br>
+  </div>
+  <div id="member2" style="display: none">
+  <div style="font-size: 15px;line-height: 30px;letter-spacing: 1px;margin-left: 5%">Team Member 2 Details:</div>
+  <center>
+  <input type="text" name="name2" id="name2" placeholder="Name 2">
+  <input type="text" name="email2" id="email2" placeholder="Email">
+  <input type="tel" name="contact2" id="contact2" placeholder="Contact (+91)" maxlength="10" style="">&nbsp;
+  <select name="branch2" id="branch2"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>
+  <select name="year2" id="year2"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;
+  <select name="living2" id="living2"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+  <br>
+  </center>
+  <br>
+  </div>
+  <div id="member3" style="display: none">
+  <div style="font-size: 15px;line-height: 30px;letter-spacing: 1px;margin-left: 5%">Team Member 3 Details:</div>
+  <center>
+  <input type="text" name="name3" id="name3" placeholder="Name 3">
+  <input type="text" name="email3" id="email3" placeholder="Email">
+  <input type="tel" name="contact3" id="contact3" placeholder="Contact (+91)" maxlength="10" style="">&nbsp;
+  <select name="branch3" id="branch3"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>
+  <select name="year3" id="year3"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;
+  <select name="living3" id="living3"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+  <br>
+  </center>
+  <br>
+  </div>
+  <div id="member4" style="display: none">
+  <div style="font-size: 15px;line-height: 30px;letter-spacing: 1px;margin-left: 5%">Team Member 4 Details:</div>
+  <center>
+  <input type="text" name="name4" id="name4" placeholder="Name 4">
+  <input type="text" name="email4" id="email4" placeholder="Email">
+  <input type="tel" name="contact4" id="contact4" placeholder="Contact (+91)" maxlength="10" style="">&nbsp;
+  <select name="branch4" id="branch4"><option value="0">Select Branch</option><option value="CS">CS</option><option value="EC">EC</option><option value="IT">IT</option><option value="EE">EE</option><option value="EEE">EEE</option><option value="CE">CE</option><option value="ME">ME</option><option value="IC">IC</option></select>
+  <select name="year4" id="year4"><option value="0">Select Year</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option></select>&nbsp;
+  <select name="living4" id="living4"><option value="0">Select Location</option><option value="JSS_Boys_Hostel">JSS Boys Hostel</option><option value="JSS_Girls_Hostel">JSS Girls Hostel</option><option value="JSS_ISH_Hostel">JSS ISH Hostel</option><option value="Sanskriti_Hostel">Sanskriti Hostel</option><option value="Other_Hostel">Other Hostel</option><option value="Day_Scholar">Day Scholar</option></select>
+  <br>
+  </center>
+  <br>
+  </div>
+  <center>
+  <br>
+  <hr size="1" colour="grey">
+  <br>
+  <div style="font-size: 16px;line-height: 45px;letter-spacing: 1px"><strong>-------- COLLEGE NAME ---------</strong></div>
+  <br>
+  </center>
+  <input type="radio" id="college" value="jss" name="college" checked onclick="disable_radio()"><span style="font-size: 18px;">JSS Academy of Technical Education,Noida
+  <br>
+  <input type="radio" id="college" name="college" value="o_college" onclick="enable_radio()">Other College</span>
+  &nbsp;&nbsp;&nbsp;
+  <input type="text" id="o_college" name="college_2" placeholder="Enter College Name" style="width: 50%;visibility: hidden;">
+  <center>
+  </center>
+  <center>
+  <hr size="1" colour="grey">
+  <div style="display: none;">
+  <div style="font-size: 16px;line-height: 65px;letter-spacing: 1px"><strong>-- PAYMENT METHOD NOTICE --</strong></div>
+  <div style="font-size: 17px;line-height: 20px;color: purple;font-weight: bold;">(Total Amount for the Team:&nbsp;&nbsp;<span class="rupee">&nbsp;2,500</span>)
+  </div>
+  <br>
+  <input type="radio" id="payment" value="cash" name="payment" checked onclick="disable_radio_payment()">&nbsp;<div style="border:3px solid rgb(238,19,19);border-radius: 50px;padding: 1px 30px;color:rgb(238,19,19);display: inline-block;"><b>Pay By Cash</b></div>
+  &nbsp;&nbsp;&nbsp;
+  <input type="radio" id="payment" value="paytm" name="payment" onclick="enable_radio_payment()"><img src="images/paytm.png" style="height:35px;width:110px;margin-top: 10px">
+  <br>
+  <div id="paytm" style="display: none">
+  <div style="color:rgb(80,80,80);font-size: 17px;margin-top: 25px;font-family: main;border: 1px solid black;padding:10px 10px 10px 5px;width: 80%"><strong><span style="border-bottom: 1px solid rgb(80,80,80);">Please Note</span></strong>&nbsp;:
+  <br>
+  <div style="font-size: 15.5px;padding-top: 10px;color: rgb(40,40,40);">&nbsp;&nbsp;&nbsp;*** The Team not sending the correct amount will not be considered for registration ***</div>
+  </div>
+  </center>
+  <br>
+  <center>
+  <div id="paytm_fill1" style="border:1px solid rgb(238,19,19);font-size: 15px;line-height: 45px;height:45px;color: rgb(238,19,19);margin-bottom: -8.5px;font-weight: bold;display: none;">
+  Please Fill the sender's Paytm mobile number:
+  </div>
+  <br>
+  <input id="payee" type="text" maxlength="10" placeholder="Enter Here" name="payee" style="box-shadow: none;height: 45px;border-top:1px solid white;border-radius: 0px;margin-top: -15px;color: purple;font-size: 20px;width: 250px;text-align: center;padding-left: 0;display: none;">
+  </center>
+  <br>
+  </div>
+  </div>
+  <br>
+  <br>
+  <center>
+  <input type="hidden" name="event" value="Intro_WS_and_OP">
+  <input type="submit" value="Register Now">
+  </center>
+  </form>
+</section>
+
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("sidenav1").style.width = "80%";
+    document.getElementById("sidenav2").style.width = "20%";
+    document.getElementById("sidenav2").style.left = "80%";
+}
+
+function closeNav() {
+    document.getElementById("sidenav1").style.width = "0";
+    document.getElementById("sidenav2").style.width = "0";
+    document.getElementById("sidenav2").style.left = "0";
+}
+</script>
+<script type="text/javascript">
+  function enable_radio(){
+    document.getElementById("o_college").style.visibility = "visible";
+  }
+  function disable_radio(){
+    document.getElementById("o_college").style.visibility = "hidden";
+  }
+</script>
+<script type="text/javascript">
+  function enable_radio_payment(){
+    document.getElementById("paytm").style.display = "block";
+    document.getElementById("paytm_fill1").style.display = "block";
+    document.getElementById("payee").style.display = "block";
+  }
+  function disable_radio_payment(){
+    document.getElementById("paytm").style.display = "none";
+    document.getElementById("paytm_fill1").style.display = "none";
+    document.getElementById("payee").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+function member_check(){
+  if(document.getElementById("member_quantity").value =="1")
+  {
+  document.getElementById("member1").style.display = "block";
+  document.getElementById("member2").style.display = "none";
+  document.getElementById("member3").style.display = "none";
+  document.getElementById("member4").style.display = "none";
+  }
+  if(document.getElementById("member_quantity").value =="2")
+  {
+  document.getElementById("member1").style.display = "block";
+  document.getElementById("member2").style.display = "block";
+  document.getElementById("member3").style.display = "none";
+  document.getElementById("member4").style.display = "none";
+  }
+  if(document.getElementById("member_quantity").value =="3")
+  {
+  document.getElementById("member1").style.display = "block";
+  document.getElementById("member2").style.display = "block";
+  document.getElementById("member3").style.display = "block";
+  document.getElementById("member4").style.display = "none";
+  }
+  if(document.getElementById("member_quantity").value =="4")
+  {
+  document.getElementById("member1").style.display = "block";
+  document.getElementById("member2").style.display = "block";
+  document.getElementById("member3").style.display = "block";
+  document.getElementById("member4").style.display = "block";
+  }
+  if(document.getElementById("member_quantity").value =="0")
+  {
+  document.getElementById("member1").style.display = "none";
+  document.getElementById("member2").style.display = "none";
+  document.getElementById("member3").style.display = "none";
+  document.getElementById("member4").style.display = "none";
+  }
+}
+</script>
+<script type="text/javascript">
+  function validate(){
+    var c=0;
+    var mem=document.getElementById("member_quantity").value;
+    var a1=document.getElementById("name1").value;
+    var a2=document.getElementById("email1").value;
+    var a3=document.getElementById("contact1").value;
+    var a4=document.getElementById("branch1").value;
+    var a5=document.getElementById("year1").value;
+    var a6=document.getElementById("living1").value;
+    var b1=document.getElementById("name2").value;
+    var b2=document.getElementById("email2").value;
+    var b3=document.getElementById("contact2").value;
+    var b4=document.getElementById("branch2").value;
+    var b5=document.getElementById("year2").value;
+    var b6=document.getElementById("living2").value;
+    var c1=document.getElementById("name3").value;
+    var c2=document.getElementById("email3").value;
+    var c3=document.getElementById("contact3").value;
+    var c4=document.getElementById("branch3").value;
+    var c5=document.getElementById("year3").value;
+    var c6=document.getElementById("living3").value;
+    var d1=document.getElementById("name4").value;
+    var d2=document.getElementById("email4").value;
+    var d3=document.getElementById("contact4").value;
+    var d4=document.getElementById("branch4").value;
+    var d5=document.getElementById("year4").value;
+    var d6=document.getElementById("living4").value;
+
+    if(mem==0)
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Choose Team Member Number ! ! !";
+      c=1;
+      return false;
+    }
+    if((a1==""||a2==""||a3=="") && c==0 && (mem==1||mem==2||mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Fill Up the Details for Candidate Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((a4=="0"||a5=="0"||a6=="0") && c==0 && (mem==1||mem==2||mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Select the Details for Candidate Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((b1==""||b2==""||b3=="") && c==0 && (mem==2||mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Fill Up the Details for Member-2 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((b4=="0"||b5=="0"||b6=="0") && c==0 && (mem==2||mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Select the Details for Member-2 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((c1==""||c2==""||c3=="") && c==0 && (mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Fill Up the Details for Member-3 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((c4=="0"||c5=="0"||c6=="0") && c==0 && (mem==3||mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Select the Details for Member-3 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((d1==""||d2==""||d3=="") && c==0 && (mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Fill Up the Details for Member-4 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((d4=="0"||d5=="0"||d6=="0") && c==0 && (mem==4))
+    { 
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Select the Details for Member-4 Correctly ! ! !";
+      c=1;
+      return false;
+    }
+    if((a1.indexOf(" ")==0||b1.indexOf(" ")==0||c1.indexOf(" ")==0||d1.indexOf(" ")==0)&&c==0)
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Enter correct names of members ! ! !";
+      c=1;
+      return false;
+    }
+    if((a2.match(/@/g)==null&&mem>=1)||(a2.match(/./g)==null&&mem>=1)||(b2.match(/@/g)==null&&mem>=2)||(b2.match(/./g)==null&&mem>=2)||(c2.match(/@/g)==null&&mem>=3)||(c2.match(/./g)==null&&mem>=3)||(d2.match(/@/g)==null&&mem>=4)||(d2.match(/./g)==null&&mem>=4)&&c==0)
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Enter correct E-mail Address for Candidate ! ! !";
+      c=1;
+      return false;
+    }
+    if((a3.length!=10&&mem>=1)||(b3.length!=10&&mem>=2)||(c3.length!=10&&mem>=3)||(d3.length!=10&&mem>=4)&&c==0)
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Enter correct 10-digit contact Number for Candidate ! ! !";
+      c=1;
+      return false;
+    }
+    if(document.getElementById("o_college").style.visibility =="visible" && document.getElementById("o_college").value =="")
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Enter Your College Name ! ! !";
+      c=1;
+      return false;
+    }
+    if(document.getElementById("payee").value =="" && document.getElementById("paytm").style.display=="block")
+    {
+      document.getElementById("error").style.display="block";
+      document.getElementById("error").innerHTML="Please Enter Sender's PayTM mobile number ! ! !";
+      c=1;
+      return false;
+    }
+    if(c==0)
+    {
+      if(document.getElementById("paytm").style.display=="none"||document.getElementById("paytm_fill1").style.display=="none")
+        {
+         document.getElementById("payee").value="0";
+        }
+      return true;
+    }
+}
+</script>
+</body>
+</html>

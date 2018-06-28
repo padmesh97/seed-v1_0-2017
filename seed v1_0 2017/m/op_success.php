@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register - S.E.E.D</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" /> 
+  <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#FFC64B">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#FFC64B">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFC64B">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    @font-face{
+    font-family:'main';
+    src:url('fonts/Nunito-Light.ttf') format('truetype');
+}
+    input[type='text']
+    {
+      margin-top: 8px;
+      margin-bottom: 8px; 
+      font-family: main;
+      width:68%;
+      letter-spacing: 1px;
+      height: 30px;
+      font-weight: bold;
+      border:1px solid rgb(238,19,19);
+      padding-left: 10px;
+      box-shadow:0 0 8px rgb(238,19,19);
+      border-radius: 4px;
+    }
+    input[type='tel']
+    {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border:1px solid rgb(238,19,19);
+      box-shadow:0 0 8px rgb(238,19,19);
+      font-family: main;
+      padding-left: 10px;
+      box-sizing: border-box;
+      font-weight: bold;
+      border-radius: 4px;
+      height: 30px;
+      width: 35%;
+    }
+    input[type='radio']
+    {
+      width: 16px;
+      height: 16px;
+       margin-left: 1%
+    }
+    select{
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border:1px solid rgb(238,19,19);
+      box-shadow:0 0 8px rgb(238,19,19);
+      font-family: main;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 30px;
+      width: 35%;
+    }
+    .rupee::before{
+    font-family: fontawesome;
+    content: "\f156";
+    font-weight: lighter;
+    }
+    input[type='submit']
+    {
+      font-family: font2;
+      font-size:85%;
+      width: 65%;
+      height: 40px;
+      margin-top: 25px;
+      margin-bottom: 30px;
+      border: 1px solid green;
+      background: none;
+      color: green;
+    }
+    input[type='submit']:hover
+    {
+      color: white;
+      background-color: green;
+      transition: 0.1s ease;
+    }
+    </style>
+</head>
+<body style="font-family: main;">
+<div id="container2">
+<header style="background-color: rgb(238,19,19);box-shadow: 1px 1px 5px grey">
+<strong>
+S.E.E.D
+</strong>
+</header>
+
+<span style="position:fixed;z-index:4;height:24px;width: 24px;padding-top: 11px;padding-left: 13px;cursor: pointer;" onclick="openNav()"><img src="images/nav_lines.png" width="22px" height="22px"></span>
+
+
+
+<div  id="sidenav1" class="sidenav">
+<div id="img_nav">
+  <div style="position:absolute;display:block;top:110px;margin-left:15px;font-family: font2;width:80%;float:left;color:white">
+  <span style="font-size:14px;letter-spacing: 4px;">
+  S.E.E.D
+  </span>
+  <br>
+  <span style="font-size:16px;letter-spacing: 2px;">
+  JSS , Noida
+  </span>
+  </div>
+</div>
+  <div class="sidenav_bar">
+     <a href="index.php">
+        <img src="images/home_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">Home</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="about.html">
+        <img src="images/about_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">About</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="contact.html">
+        <img src="images/contact_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">Contact Us</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="info_app.html">
+        <img src="images/info_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">About S.E.E.D App</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="live_up.html">
+        <img src="images/gift_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">S.E.E.D Live Updates</span>
+     </a>
+  </div>
+
+  <hr size=1 style="position: relative;width:100%;" >
+
+  <div style="height:30px;width:100%;box-sizing: border-box;padding:0 0 0 10px;font-size: 110%;z-index: 6;color:#A3A3A3;display: inline-block;">Extras
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="http://210.212.85.154/isimjss/login">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS SIM</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="http://210.212.85.155">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS InfoConnect</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar">
+     <a href="https://aktu.ac.in">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">AKTU Website</span>
+     </a>
+  </div>
+
+  <div class="sidenav_bar" >
+     <a href="http://www.jssaten.ac.in">
+        <img src="images/extra_s.png" height="50px" width="50px">
+        <span class="sidenav_text2">JSS Website</span>
+     </a>
+  </div>
+
+  <div style="height:70px;width: 100%; display: inline-block;box-sizing: border-box;z-index: 6;">
+  <center>
+     <a href="https://www.facebook.com/jssseed">
+        <img src="images/fb_s.ico" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     &nbsp;
+     <a href="https://www.youtube.com/channel/UCkAjX_ngcjQ_rjJ2m5pFUjg">
+        <img src="images/yt_s.ico" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     &nbsp;
+     <a href="https://www.plus.google.com">
+        <img src="images/gle_s.png" style="position: relative;padding:20px 0 0 0;width:40px" height="30px" width="30px">
+     </a>
+     </center>
+ </div>
+
+</div>
+
+<a href="javascript:void(0)" id="sidenav2" class="sidenav_rest" onclick="closeNav()"></a>
+
+<section style="position: relative;top:200px">
+  <center>
+  <div style="font-size:19px;line-height:30px;letter-spacing:0.5px;width: 97%;background-color: white;padding:8px 3px 8px 3px;box-sizing: border-box;margin-top:5px;border:1px solid rgb(238,19,19); box-shadow:0 0 10px rgb(238,19,19);">
+  You Have been Registered for Introductory Workshop Successfully.
+  <br><br><span style="color: purple">Date : 11 September 2017<br>Venue :Multi Purpose Hall(MPH)<br>Time: 3:45pm to 4:30pm</span>
+  <br><br><br><br><span style="font-size: 15px">Time and date of registeration: 
+  <?php
+  $t=$_GET['t'];
+  echo $t;
+  ?>
+  </span>
+  </div>
+  </center>
+  </section>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("sidenav1").style.width = "80%";
+    document.getElementById("sidenav2").style.width = "20%";
+    document.getElementById("sidenav2").style.left = "80%";
+}
+
+function closeNav() {
+    document.getElementById("sidenav1").style.width = "0";
+    document.getElementById("sidenav2").style.width = "0";
+    document.getElementById("sidenav2").style.left = "0";
+}
+</script>
+</body>
+</html>

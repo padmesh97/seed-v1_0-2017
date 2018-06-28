@@ -1,0 +1,4 @@
+padmesh kunwar	EC		2nd year	MARKS:9
+sonu	EEE		2nd year	MARKS:9
+divs	EE		2nd year	MARKS:4
+pad	EC		2nd year	MARKS:0

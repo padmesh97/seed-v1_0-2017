@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<title>S.E.E.D - Society of Electrical and Electronics Department , JSS Noida</title>
+	<meta name="viewport" content="width=screen-width">
+	<style type="text/css">
+		html,body{font-family: 'PT Sans', sans-serif;height: 100%;color: rgb(80,80,80)}
+		.paper{margin-left:20%}.custom{color: red}
+		body{
+			background-image:url('bg.jpg');
+			background-size:50% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		input[type=text]{
+			font-family: 'PT Sans', sans-serif;color:blue;padding-left:7px;font-weight: bold;text-transform:uppercase;
+		}
+		select{
+			font-family: 'PT Sans', sans-serif;color:blue;
+		}
+		input[type=radio]{
+			width: 19px;height: 19px;
+		}
+			input[type=submit]{
+			width: 200px;height:40px;font-size:18px;font-weight: bold;border-radius: 20px;background-color:lightgreen;border:2px solid black;cursor: pointer;margin-bottom: 5%
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div style="border:1.5px solid black;padding:0px 15px 0px 15px;width: 70%">
+<h2>SOCIETY OF ELECTRICAL AND ELECTRONICS DEPARTMENT (S.E.E.D)</h2></div>
+<h2><u>Aptitude Test&nbsp;&nbsp;-&nbsp;&nbsp;Recruitments&nbsp;&nbsp;(2017-2018)</u></h2>
+<h4><span style="color: blue">Please FILL Up your details before starting the test.</span></h4>
+<br>
+<b>
+	<span class="custom">
+	<form action="result.php" method="post">
+	Name : <input type="text" name="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Branch : <select  name="branch"><option>CS</option><option>EC</option><option>IT</option><option>EE</option><option>EEE</option><option>CE</option><option>ME</option><option>IC</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Year : <select  name="year"><option>1st year</option><option>2nd year</option></select>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <div style="background-color: red;color:white;padding: 8px;width: 30%;margin-top: 2%" id="demo"></div>
+   <br><br>
+</span>
+</b>
+</center>
+<center>
+<div id="welcome" style="display: block;margin-top: 4%;border:2px solid red;padding: 20px;cursor: pointer;width: 50%;font-size: 25px" onclick="test_f(1)">
+		<b>Start the Test</b>
+</div>
+</center>
+<div id="test" style="display: none">
+<div class="paper">
+	<h4><b>1.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Complete the sequence: <b> 2 , 4 , 12 , 48 , 240 , __</b></h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="a">960
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="b">1440
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="c">1080
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="d">1920
+	<br><br>
+
+	<h4><b>2.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fill the gap: <b>664 , 332 , 340 , 170 , __ , 89</b></h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="a">85
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="b">97
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="c">109
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="d">178
+	<br><br>
+
+	<h4><b>3.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If A=x% of y  and  B=y%x, then which of the following is true?</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="a">A is smaller than B.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="b">A is greater than B.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="c">Relationship between them can't be determined.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="d">None of these.
+	<br><br>
+
+	<h4><b>4.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hit the Odd one :&nbsp;<b>396 , 462 , 572 , 427 , 671 , 264</b></h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="a">396 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="b">427
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="c">671
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="d">264
+	<br><br>
+
+	<h4><b>5.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fill the series <b>F2 , __ , D8 , C16 , B32</b></h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="a">A16
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="b">G4
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="c">E4
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="d">E3
+	<br><br>
+
+	<h4><b>6.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blueberries cost more than strawberries.<br>
+	Blueberries cost less than raspberries.<br>
+Raspberries cost more than Blueberries.<br>
+If first two statements are true,the third statement is</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="a">True
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="b">False
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="c">Uncertain
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="d">None of the above
+	<br><br>
+
+	<h4><b>7.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Two students appeared in an exam.one of them secured 9 marks more than the other and his marks was 56%<br> of the sum of their marks.The amrks obtained by them are:</b></h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="a">39 , 30
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="b">41 , 32
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="c">42 , 33
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="d">43 , 34
+	<br><br>
+
+	<h4><b>8.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How many digital Input / Output pins are there in Arduino ? </h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="a">3
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="b">6
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="c">13
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="d">12
+	<br><br>
+
+	<h4><b>9.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The syntax <b>"pinMode"</b> in Arduino programming is used for?</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="a">Allocating space for pins.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="b">Declaring variables.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="c">Setting pins for Input / Output.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="d">Declaring the setup time for the pin.
+	<br><br>
+
+	<h4><b>10.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Oscillator of the Arduino board is technically known as ?</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="a">Diamond Oscillator
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="b">Sillicon Oscillator
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="c">Crystal Oscillator
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="d">Germanium Oscillator
+	<br><br>
+
+	<h4><b>11.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max Output Voltage that an Arduino board can supply through digital pin in its high state is ?</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q11" value="a">+2.5 V
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q11" value="b">+5.0 V
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q11" value="c">+9.0 V
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q11" value="d">+12.0 V
+	<br><br>
+
+	<h4><b>12.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An Arduino board is a ? </h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q12" value="a">Microcomputer
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q12" value="b">Microsemiconductor
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q12" value="c">Microcontroller
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q12" value="d">None of these
+	<br><br>
+
+	<h4><b>13.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Which pin has an LED directly attached in an Arduino board ? </h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q13" value="a">3
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q13" value="b">13
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q13" value="c">10
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q13" value="d">5
+	<br><br>
+
+	<h4><b>14.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The extra properties of tags in HTML Documents sre called as:</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q14" value="a">Attributes
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q14" value="b">Specifications
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q14" value="c">Characteristics
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q14" value="d">Layout
+	<br><br>
+
+	<h4><b>15.)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An HTML file/webpage can be excuted normally on ?</h4>
+	<b>A.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="a">Only Local Computer.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>B.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="b">Only Server Computer.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>C.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="c">None of these.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	<b>D.</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="d">Both A and B.
+	<br><br>
+
+</div>
+	<br><br><center><input type="submit" id="submit" style="display:none;" value="Submit Response"></center>
+</div>
+</form>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date().getTime()+(30*60*1000)+2000;
+
+// Update the count down every 1 second
+function test_f(trigger)
+{
+if(trigger==1)
+{
+	document.getElementById("welcome").style.display = "none";
+	document.getElementById("welcome").innerHTML = ""
+document.getElementById("test").style.display = "block";
+document.getElementById("submit").style.display = "block";
+var x = setInterval(function() {
+
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = "MINUTES: "+minutes +"       SECONDS:  "+ seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME ENDED";
+        document.getElementById("test").style.display = "none";
+        document.getElementById("welcome").style.display = "block";
+        document.getElementById("submit").style.display = "block";
+        document.getElementById("welcome").innerHTML = "Your test has Ended. Thankyou"
+    }
+}, 1000);
+}
+}
+if(trigger==2)
+{
+	document.getElementById("welcome").innerHTML = "Your test has Ended. Thankyou"
+}
+</script>
+
+</body>
+</html>
